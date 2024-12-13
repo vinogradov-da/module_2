@@ -7,15 +7,15 @@ if __name__ == "__main__":
 
     try:
         phone.set_memory(-124)
-    except TypeError:
+    except ValueError:
         print('Ошибка: неправильные данные')
 
     try:
         car.change_speed(-100)
-    except TypeError:
+    except ValueError:
         print('Ошибка: неправильные данные')
 
     try:
      folding_table.increase_length(-45)
-    except TypeError:
+    except ValueError:
         print('Ошибка: неправильные данные')
