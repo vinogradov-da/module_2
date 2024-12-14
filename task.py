@@ -72,7 +72,7 @@ class Table:
         """
         return f'Высота стола {self.height} см, длина - {self.length} см'
 
-    def increase_length(self, new_length) -> None:
+    def increase_length(self, new_length: int) -> None:
         """
         Изменяем длину стола.
         >>> folding_table = Table(70, 150)
