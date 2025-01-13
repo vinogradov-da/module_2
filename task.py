@@ -13,7 +13,7 @@ class ConiferousTree:
             repr: Возвращает строку для внутреннего представления объекта.
             grow: Базовый метод для увеличения высоты.
     """
-    class ConiferousTree:
+    
         def __init__(self, age: int, height: float) -> None:
             self.age = age
             self.height = height
@@ -28,10 +28,12 @@ class ConiferousTree:
             """
             Метод, который увеличивает высоту дерева.
             """
+            
 # TODO: описать дочерний класс
 class Pine(ConiferousTree):
     """
         Дочерний класс Pine, наследующий ConiferousTree.
+        
         Атрибуты:
             age (int): Возраст дерева.
             height (int): Высота дерева в метрах.
@@ -42,6 +44,7 @@ class Pine(ConiferousTree):
             str: Перегружает строковое представление.
             grow: Перегружает метод для увеличения высоты.
         """
+
     def __init__(self, age: int, height: float, type: str) -> None:
         super().__init__(age, height, "pine")
         self.type = type
