@@ -1,4 +1,3 @@
-# TODO: описать базовый класс
 class ConiferousTree:
     """
         Базовый класс ConiferousTree.
@@ -28,9 +27,17 @@ class ConiferousTree:
             """
             Метод, который увеличивает высоту дерева.
             """
+        def location(self, place: str)-> None:
+
+        """
+        Метод, показывающий расположение дерева.
+
+        place (str): Расположение дерева.
+        """
+
+        return f"A coniferous tree aged {self.age} years and {self.height} meters tall growing in {place}."
             
-# TODO: описать дочерний класс
-class Pine(ConiferousTree):
+class Pine(ConiferousTree):  
     """
         Дочерний класс Pine, наследующий ConiferousTree.
         
@@ -48,12 +55,19 @@ class Pine(ConiferousTree):
     def __init__(self, age: int, height: float, type: str) -> None:
         super().__init__(age, height, "pine")
         self.type = type
-
-    def __str__(self) -> str:
-        return f"{super().__str__()} is {self.type} pine."
-
+    
     def grow(self, growth: float) -> None:
         self.height += growth
+
+    def location(self, place: str) -> None:
+        """
+       Перезагруженный метод, показывающий расположение дерева.
+       Добавляет тип дерева.
+
+        place (str): Расположение дерева.
+        """
+
+        return f"A coniferous tree {self.age} years and {self.height} meters tall growing in {place} is {self.type}."
 
 
 
